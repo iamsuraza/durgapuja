@@ -44,18 +44,18 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-14 h-14 rounded-full p-0.5 bg-gradient-to-tr from-amber-400 to-amber-600 shadow-lg shrink-0">
+              <div className="w-14 h-14 min-w-[56px] min-h-[56px] shrink-0 aspect-square rounded-full p-0.5 bg-gradient-to-tr from-amber-400 to-amber-600 shadow-lg">
                 <img 
                   src={siteContent.logoImage} 
                   alt="श्री जय दुर्गा पूजा सेवा समिति लोगो" 
-                  className="w-full h-full object-cover rounded-full bg-white"
+                  className="w-full h-full aspect-square object-contain rounded-full bg-white block"
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <span className="text-amber-400 text-xs font-serifDeva block">
                   {siteContent.invocation}
                 </span>
-                <h3 className="text-xl font-bold font-serifDeva text-white leading-normal py-0.5">
+                <h3 className="text-lg sm:text-xl font-bold font-serifDeva text-white leading-normal py-0.5">
                   {siteContent.committeeName}
                 </h3>
               </div>

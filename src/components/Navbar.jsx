@@ -44,26 +44,27 @@ export const Navbar = () => {
           {/* Brand Logo & Name */}
           <a 
             href="#hero" 
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1"
+            className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-amber-400 rounded-lg p-1 min-w-0"
           >
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-0.5 bg-gradient-to-tr from-amber-500 via-amber-300 to-amber-600 shadow-md group-hover:scale-105 transition-transform duration-300">
+            {/* Logo Container - Explicit shrink-0, aspect-square, and fixed dimensions so it NEVER squeezes into an oval */}
+            <div className="relative w-11 h-11 sm:w-14 sm:h-14 min-w-[44px] min-h-[44px] sm:min-w-[56px] sm:min-h-[56px] shrink-0 aspect-square rounded-full p-0.5 bg-gradient-to-tr from-amber-500 via-amber-300 to-amber-600 shadow-md group-hover:scale-105 transition-transform duration-300">
               <img 
                 src={siteContent.logoImage} 
                 alt="श्री जय दुर्गा पूजा सेवा समिति लोगो" 
-                className="w-full h-full object-cover rounded-full bg-white"
+                className="w-full h-full aspect-square object-contain rounded-full bg-white block"
                 loading="eager"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-amber-200 text-xs font-serifDeva tracking-wider leading-normal">
+            <div className="flex flex-col min-w-0">
+              <span className="text-amber-200 text-[10px] sm:text-xs font-serifDeva tracking-wider leading-tight">
                 {siteContent.invocation}
               </span>
-              <span className="text-white font-bold text-sm sm:text-base md:text-xl font-serifDeva leading-normal py-0.5 tracking-wide group-hover:text-amber-300 transition-colors">
+              <span className="text-white font-bold text-xs sm:text-base md:text-xl font-serifDeva leading-snug py-0.5 tracking-wide group-hover:text-amber-300 transition-colors truncate sm:whitespace-normal">
                 {siteContent.committeeName}
               </span>
-              <span className="text-amber-300/80 text-[11px] sm:text-xs flex items-center gap-1 font-medium leading-normal">
+              <span className="text-amber-300/80 text-[10px] sm:text-xs flex items-center gap-1 font-medium leading-tight truncate sm:whitespace-normal">
                 <MapPin className="w-3 h-3 text-amber-400 shrink-0" />
-                <span>{siteContent.shortAddress}</span>
+                <span className="truncate">{siteContent.shortAddress}</span>
               </span>
             </div>
           </a>

@@ -27,11 +27,11 @@ export const Hero = () => {
         {/* Committee Logo with Golden Seal Rings */}
         <div className="relative mb-6 group">
           <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500 via-yellow-300 to-amber-600 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition duration-500" />
-          <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full p-1 bg-gradient-to-b from-amber-300 to-amber-600 shadow-2xl flex items-center justify-center">
+          <div className="relative w-28 h-28 sm:w-36 sm:h-36 shrink-0 aspect-square rounded-full p-1 bg-gradient-to-b from-amber-300 to-amber-600 shadow-2xl flex items-center justify-center">
             <img 
               src={siteContent.logoImage} 
               alt="श्री जय दुर्गा पूजा सेवा समिति आधिकारिक लोगो" 
-              className="w-full h-full object-cover rounded-full bg-white shadow-inner"
+              className="w-full h-full aspect-square object-contain rounded-full bg-white shadow-inner block"
             />
           </div>
           <div className="absolute -bottom-2 -right-2 bg-temple-crimson text-amber-300 p-1.5 rounded-full border border-amber-400 shadow-md">
